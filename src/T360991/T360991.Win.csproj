@@ -59,7 +59,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Para.ExpressApp.CommandLineLauncher\Para.ExpressApp.CommandLineLauncher.Win.csproj">
+    <ProjectReference Include="..\Para.ExpressApp.CommandLineLauncher\Para.ExpressApp.CommandLineLauncher.Win.csproj">
       <Project>{b282e2fa-43e3-4e99-aa3d-39d0969f3f38}</Project>
       <Name>Para.ExpressApp.CommandLineLauncher.Win</Name>
     </ProjectReference>

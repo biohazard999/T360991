@@ -185,11 +185,10 @@ namespace Para.ExpressApp.CommandLineLauncher.Win.Domain
         {
             if (!disposed)
             {
-                if (_Mutex != null && _OwnsMutex)
-                {
-                    _Mutex.ReleaseMutex();
-                    _Mutex = null;
-                }
+                _Mutex?.Close();
+                _Mutex?.Dispose();
+                _Mutex = null;
+
                 disposed = true;
             }
         }

@@ -49,8 +49,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Para.ExpressApp.CommandLineLauncher\Para.ExpressApp.CommandLineLauncher.Win.csproj">
-      <Project>{B282E2FA-43E3-4E99-AA3D-39D0969F3F38}</Project>
+    <ProjectReference Include="..\Para.ExpressApp.CommandLineLauncher\Para.ExpressApp.CommandLineLauncher.Win.csproj">
+      <Project>{b282e2fa-43e3-4e99-aa3d-39d0969f3f38}</Project>
       <Name>Para.ExpressApp.CommandLineLauncher.Win</Name>
     </ProjectReference>
     <ProjectReference Include="..\T360991.Module\T360991.Module.csproj">
