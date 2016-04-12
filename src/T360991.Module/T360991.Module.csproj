@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\CommandLineParser.cs" />
     <Compile Include="Model\IModelApplicationCommandlineOptions.cs" />
     <Compile Include="Model\IModelCommandlineOption.cs" />
     <Compile Include="Model\IModelCommandlineOptionsIModelNode.cs" />

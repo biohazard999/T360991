@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DevExpress.ExpressApp.SystemModule;
-using DevExpress.ExpressApp.Win.SystemModule;
 using Shouldly;
-using T360991.Module;
 using T360991.Module.Model;
-using T360991.Module.Win;
 using Xunit;
 
 namespace T360991.Tests
@@ -19,10 +12,7 @@ namespace T360991.Tests
         public ApplicationModelTests()
         {
             Application = new TestApplication();
-            Application.Modules.Add(new SystemModule());
-            Application.Modules.Add(new SystemWindowsFormsModule());
-            Application.Modules.Add(new T360991Module());
-            Application.Modules.Add(new T360991WindowsFormsModule());
+
             Application.Setup();
         }
 
