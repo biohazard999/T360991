@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using DevExpress.ExpressApp.Model;
 using DevExpress.ExpressApp.SystemModule;
-using T360991.Module.Model;
+using Para.ExpressApp.CommandLineLauncher.Win.Model;
 
-namespace T360991.Module.Domain
+namespace Para.ExpressApp.CommandLineLauncher.Win.Domain
 {
     public class CommandLineParser
     {
@@ -16,7 +14,7 @@ namespace T360991.Module.Domain
         {
             this.model = model;
         }
-
+        
         public IModelNavigationItem Parse(string[] commandlineArguments)
         {
             var commandLineOptions = ((IModelApplicationCommandlineOptions) model);

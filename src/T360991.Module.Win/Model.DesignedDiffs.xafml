@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <CommandlineOptions>
+    <CommandlineOption Id="Events" Argument="/Events" NavigationItem="Event_ListView" IsNewNode="True" />
+    <CommandlineOption Id="People" Argument="/People" NavigationItem="@489ec347-c364-47de-8265-3b4d64a4569b" IsNewNode="True" />
+  </CommandlineOptions>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="@489ec347-c364-47de-8265-3b4d64a4569b" ViewId="Person_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="15.2.9.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="15.2.9.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>

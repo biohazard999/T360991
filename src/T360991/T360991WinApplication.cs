@@ -6,6 +6,7 @@ using DevExpress.ExpressApp.SystemModule;
 using DevExpress.ExpressApp.Win;
 using DevExpress.ExpressApp.Win.SystemModule;
 using DevExpress.Persistent.BaseImpl;
+using Para.ExpressApp.CommandLineLauncher.Win;
 using T360991.Module;
 using T360991.Module.Win;
 
@@ -25,6 +26,7 @@ namespace T360991.Win
             //This is for demo purposes only, so we have some persistent classes and data to play with
             Modules.Add(new DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule(typeof(Event).Assembly));
 
+            Modules.Add(new CommandLineLauncherWindowsFormsModule());
             Modules.Add(new T360991Module());
             Modules.Add(new T360991WindowsFormsModule());
         }

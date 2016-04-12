@@ -2,7 +2,7 @@
 using DevExpress.ExpressApp.SystemModule;
 using DevExpress.Persistent.Base;
 
-namespace T360991.Module.Model
+namespace Para.ExpressApp.CommandLineLauncher.Win.Model
 {
     public interface IModelCommandlineOption : IModelNode
     {

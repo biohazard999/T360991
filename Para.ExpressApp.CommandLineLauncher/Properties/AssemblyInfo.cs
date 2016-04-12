@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Para.ExpressApp.CommandLineLauncher.Win.Tests")]
+[assembly: AssemblyTitle("Para.ExpressApp.CommandLineLauncher.Win")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Para.ExpressApp.CommandLineLauncher.Win.Tests")]
+[assembly: AssemblyProduct("Para.ExpressApp.CommandLineLauncher.Win")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("22257d22-26b7-4768-8085-207d37911466")]
+[assembly: Guid("b282e2fa-43e3-4e99-aa3d-39d0969f3f38")]
 
 // Version information for an assembly consists of the following four values:
 //

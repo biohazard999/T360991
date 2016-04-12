@@ -5,8 +5,9 @@ using System.Text;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Editors;
 using DevExpress.ExpressApp.Model;
+using DevExpress.ExpressApp.Objects;
 using DevExpress.ExpressApp.SystemModule;
-using T360991.Module.Model;
+using DevExpress.Persistent.BaseImpl;
 
 namespace T360991.Module
 {
@@ -14,18 +15,19 @@ namespace T360991.Module
     {
         protected override ModuleTypeList GetRequiredModuleTypesCore()
         {
-            return new ModuleTypeList(typeof(SystemModule));
-        }
-
-        public override void ExtendModelInterfaces(ModelInterfaceExtenders extenders)
-        {
-            base.ExtendModelInterfaces(extenders);
-            extenders.Add<IModelApplication, IModelApplicationCommandlineOptions>();
+            return new ModuleTypeList(
+                typeof(SystemModule),
+                typeof(BusinessClassLibraryCustomizationModule)
+                );
         }
 
         protected override IEnumerable<Type> GetDeclaredExportedTypes()
         {
-            return Type.EmptyTypes;
+            return new[]
+            {
+                typeof(Event),
+                typeof(Person)
+            };
         }
 
         protected override IEnumerable<Type> GetDeclaredControllerTypes()

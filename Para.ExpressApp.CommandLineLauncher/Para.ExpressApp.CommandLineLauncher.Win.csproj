@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0A6B3805-39C4-497C-B1C8-699932112106}</ProjectGuid>
+    <ProjectGuid>{B282E2FA-43E3-4E99-AA3D-39D0969F3F38}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>T360991.Module.Win</RootNamespace>
-    <AssemblyName>T360991.Module.Win</AssemblyName>
+    <RootNamespace>Para.ExpressApp.CommandLineLauncher.Win</RootNamespace>
+    <AssemblyName>Para.ExpressApp.CommandLineLauncher.Win</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,12 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.ExpressApp.Objects.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.Win.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Persistent.BaseImpl.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,24 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="T360991WindowsFormsModule.cs">
+    <Compile Include="CommandLineLauncherWindowsFormsModule.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controllers\ProcessCommandlineShortcutWindowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Domain\ArgumentsReceivedEventArgs.cs" />
+    <Compile Include="Domain\CommandLineParser.cs" />
+    <Compile Include="Domain\SingleInstance.cs" />
+    <Compile Include="Model\CommandlineOptionsModelNodesGenerator.cs" />
+    <Compile Include="Model\IModelApplicationCommandlineOptions.cs" />
+    <Compile Include="Model\IModelCommandlineOption.cs" />
+    <Compile Include="Model\IModelCommandlineOptionsIModelNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ControlExtentions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Para.ExpressApp.CommandLineLauncher\Para.ExpressApp.CommandLineLauncher.Win.csproj">
-      <Project>{B282E2FA-43E3-4E99-AA3D-39D0969F3F38}</Project>
-      <Name>Para.ExpressApp.CommandLineLauncher.Win</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\T360991.Module\T360991.Module.csproj">
-      <Project>{e745684b-65f4-4b50-97ca-7e10e934051b}</Project>
-      <Name>T360991.Module</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Images\OperatingSystem.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
-    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Images\OperatingSystem_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

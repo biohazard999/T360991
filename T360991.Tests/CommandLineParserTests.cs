@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Para.ExpressApp.CommandLineLauncher.Win.Domain;
 using Shouldly;
-using T360991.Module.Domain;
 using Xunit;
 
-namespace T360991.Tests
+namespace Para.ExpressApp.CommandLineLauncher.Win
 {
     public class CommandLineParserTests : IDisposable
     {

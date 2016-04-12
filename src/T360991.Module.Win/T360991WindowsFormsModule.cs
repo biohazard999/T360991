@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.Actions;
 using DevExpress.ExpressApp.Editors;
+using DevExpress.ExpressApp.Objects;
 using DevExpress.ExpressApp.SystemModule;
 using DevExpress.ExpressApp.Win;
 using DevExpress.ExpressApp.Win.SystemModule;
+using Para.ExpressApp.CommandLineLauncher.Win;
 
 namespace T360991.Module.Win
 {
@@ -17,6 +20,8 @@ namespace T360991.Module.Win
             return new ModuleTypeList(
                 typeof(SystemModule),
                 typeof(SystemWindowsFormsModule),
+                typeof(CommandLineLauncherWindowsFormsModule),
+                typeof(BusinessClassLibraryCustomizationModule),
                 typeof(T360991Module)
             );
         }
@@ -35,20 +40,6 @@ namespace T360991.Module.Win
         {
         }
 
-        public override void Setup(XafApplication application)
-        {
-            base.Setup(application);
-            if (application is WinApplication)
-            {
-                var args = Environment.GetCommandLineArgs();
-                if (args.Length > 1)
-                {
-                    var argumentsWithoutExe = args.Skip(1);
-                    
-
-
-                }
-            }
-        }
+      
     }
 }

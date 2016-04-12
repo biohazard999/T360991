@@ -1,12 +1,11 @@
-﻿using DevExpress.ExpressApp;
-using DevExpress.ExpressApp.Model;
+﻿using DevExpress.ExpressApp.Model;
 using DevExpress.ExpressApp.Model.Core;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.ExpressApp.SystemModule;
 using DevExpress.Persistent.BaseImpl;
-using T360991.Module.Model;
+using Para.ExpressApp.CommandLineLauncher.Win.Model;
 
-namespace T360991.Tests
+namespace Para.ExpressApp.CommandLineLauncher.Win
 {
     public class NavigationItemGeneratorUpdater : ModelNodesGeneratorUpdater<NavigationItemNodeGenerator>
     {

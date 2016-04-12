@@ -6,10 +6,8 @@ using DevExpress.ExpressApp.Model.Core;
 using DevExpress.ExpressApp.SystemModule;
 using DevExpress.ExpressApp.Win.SystemModule;
 using DevExpress.Persistent.BaseImpl;
-using T360991.Module;
-using T360991.Module.Win;
 
-namespace T360991.Tests
+namespace Para.ExpressApp.CommandLineLauncher.Win
 {
     public class TestModule : ModuleBase
     {
@@ -18,8 +16,7 @@ namespace T360991.Tests
             return new ModuleTypeList(
                 typeof(SystemModule),
                 typeof(SystemWindowsFormsModule),
-                typeof(T360991Module),
-                typeof(T360991WindowsFormsModule));
+                typeof(CommandLineLauncherWindowsFormsModule));
         }
 
         protected override IEnumerable<Type> GetDeclaredExportedTypes()

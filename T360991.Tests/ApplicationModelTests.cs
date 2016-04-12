@@ -1,9 +1,9 @@
 ﻿using System;
+using Para.ExpressApp.CommandLineLauncher.Win.Model;
 using Shouldly;
-using T360991.Module.Model;
 using Xunit;
 
-namespace T360991.Tests
+namespace Para.ExpressApp.CommandLineLauncher.Win
 {
     public class ApplicationModelTests : IDisposable
     {
@@ -21,13 +21,6 @@ namespace T360991.Tests
         {
             var result = Application.Model is IModelApplicationCommandlineOptions;
             result.ShouldBe(true);
-        }
-
-        [Fact]
-        public void DefaultValueForSingleInstanceIsTrue()
-        {
-            var model = Application.Model as IModelApplicationCommandlineOptions;
-            model.CommandlineOptions.SingeInstance.ShouldBe(true);
         }
 
         public void Dispose()
