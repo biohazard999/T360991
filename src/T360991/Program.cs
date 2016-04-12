@@ -9,6 +9,7 @@ using DevExpress.ExpressApp.Xpo;
 using DevExpress.Persistent.BaseImpl;
 using T360991.Module;
 using T360991.Module.Win;
+using T360991.Win;
 
 namespace T360991
 {
@@ -25,22 +26,11 @@ namespace T360991
 
 
             InMemoryDataStoreProvider.Register();
-            
-            var application = new WinApplication
+
+            var application = new T360991WinApplication
             {
-                ApplicationName = nameof(T360991),
-                SplashScreen = new DevExpress.ExpressApp.Win.Utils.DXSplashScreen(),
                 ConnectionString = InMemoryDataStoreProvider.ConnectionString
             };
-
-            application.Modules.Add(new SystemModule());
-            application.Modules.Add(new SystemWindowsFormsModule());
-
-            //This is for demo purposes only, so we have some persistent classes and data to play with
-            application.Modules.Add(new DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule(typeof(Event).Assembly));
-
-            application.Modules.Add(new T360991Module());
-            application.Modules.Add(new T360991WindowsFormsModule());
 
             application.CreateCustomObjectSpaceProvider += (sender, args) =>
             {

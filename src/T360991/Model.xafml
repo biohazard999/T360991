@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <CommandlineOptions>
+    <CommandlineOption Id="Analysis" Argument="/Analysis" NavigationItem="Analysis_ListView" IsNewNode="True" />
+    <CommandlineOption Id="Scheduler" Argument="/Event" NavigationItem="Event_ListView" IsNewNode="True" />
+  </CommandlineOptions>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="15.2.9.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="15.2.9.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>

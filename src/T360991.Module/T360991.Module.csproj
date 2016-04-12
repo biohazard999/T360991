@@ -40,10 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\IModelApplicationCommandlineOptions.cs" />
+    <Compile Include="Model\IModelCommandlineOption.cs" />
+    <Compile Include="Model\IModelCommandlineOptionsIModelNode.cs" />
     <Compile Include="T360991Module.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\OperatingSystem.png" />
+    <EmbeddedResource Include="Images\OperatingSystem_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
