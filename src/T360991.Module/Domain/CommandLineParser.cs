@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using DevExpress.ExpressApp.Model;
 using DevExpress.ExpressApp.SystemModule;
+using T360991.Module.Model;
 
 namespace T360991.Module.Domain
 {
@@ -18,9 +19,17 @@ namespace T360991.Module.Domain
 
         public IModelNavigationItem Parse(string[] commandlineArguments)
         {
-            var navigationItems = ((IModelApplicationNavigationItems)model);
+            var commandLineOptions = ((IModelApplicationCommandlineOptions) model);
 
-            return navigationItems.NavigationItems.Items["Default"].Items.First();
+            if (commandlineArguments.Length > 0)
+            {
+                var keyArgument = commandlineArguments.First().ToLower();
+
+                var item = commandLineOptions.CommandlineOptions.FirstOrDefault(m => m.Argument.Equals(keyArgument, StringComparison.InvariantCultureIgnoreCase));
+
+                return item?.NavigationItem;
+            }
+            return null;
         }
     }
 }

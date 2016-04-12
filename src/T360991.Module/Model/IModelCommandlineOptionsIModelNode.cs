@@ -5,6 +5,7 @@ using DevExpress.Persistent.Base;
 namespace T360991.Module.Model
 {
     [ImageName("OperatingSystem")]
+    [ModelNodesGenerator(typeof(CommandlineOptionsModelNodesGenerator))]
     public interface IModelCommandlineOptionsIModelNode : IModelNode, IModelList<IModelCommandlineOption>
     {
         [DefaultValue(true)]

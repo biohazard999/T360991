@@ -7,7 +7,6 @@ using DevExpress.ExpressApp.Model;
 
 namespace T360991.Module.Model
 {
-    
     public interface IModelApplicationCommandlineOptions : IModelNode
     {
         IModelCommandlineOptionsIModelNode CommandlineOptions { get; }

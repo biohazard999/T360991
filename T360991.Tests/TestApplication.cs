@@ -2,6 +2,7 @@
 using DevExpress.ExpressApp.Layout;
 using DevExpress.ExpressApp.SystemModule;
 using DevExpress.ExpressApp.Win.SystemModule;
+using DevExpress.Persistent.BaseImpl;
 using T360991.Module;
 using T360991.Module.Win;
 
@@ -13,6 +14,7 @@ namespace T360991.Tests
         {
             Modules.Add(new SystemModule());
             Modules.Add(new SystemWindowsFormsModule());
+            
             Modules.Add(new T360991Module());
             Modules.Add(new T360991WindowsFormsModule());
         }
